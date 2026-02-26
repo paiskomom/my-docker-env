@@ -23,4 +23,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/rom-builder:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/paiskomom:knjt
