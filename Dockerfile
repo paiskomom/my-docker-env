@@ -16,7 +16,8 @@ RUN apt-get update -y && \
 RUN git lfs install --skip-repo
 
 RUN ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime && \
-    dpkg-reconfigure --frontend noninteractive tzdata
+    dpkg-reconfigure --frontend noninteractive tzdata && \
+    ln -sf /proc/mounts /etc/mtab
 
 RUN curl -o /usr/local/bin/repo https://storage.googleapis.com/git-repo-downloads/repo && \
     chmod a+x /usr/local/bin/repo
